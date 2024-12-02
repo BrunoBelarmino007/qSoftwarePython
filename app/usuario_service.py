@@ -9,7 +9,11 @@ class Usuario:
 class UsuarioService:
     def __init__(self):
         # Lista que vai armazenar os usuários (em um cenário real, isso seria um banco de dados)
-        self.usuarios = []
+        self.usuarios = [
+            Usuario(nome="João Silva", email="joao@exemplo.com", senha="senha123"),
+            Usuario(nome="Maria Oliveira", email="maria@exemplo.com", senha="1234senha"),
+            Usuario(nome="Pedro Costa", email="pedro@exemplo.com", senha="abcd1234")
+        ]
 
     def cadastrar_usuario(self, nome, email, senha):
         """
