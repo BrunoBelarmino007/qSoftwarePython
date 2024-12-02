@@ -9,6 +9,18 @@
 <body>
     <div class="container">
         <h1>Login</h1>
+
+        <!-- Pop-up de Mensagens de Flash -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <ul>
+            {% for category, message in messages %}
+            <li class="alert {{ category }}">{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+
         <form method="POST">
             <div>
                 <label for="email">Email</label>
